@@ -203,7 +203,7 @@ app.post('/api/create', function(req, res) {
 	r['rate'] = [];	
 	r['photo'] = null;
 	r['mimetype'] = null;
-	r['createby'] = null;
+	r['createby'] = req.body.createby;
 	
 	MongoClient.connect(mongourl, function(err, db) {
 		assert.equal(err,null);
