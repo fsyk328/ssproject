@@ -4,7 +4,7 @@
   <title><%= r.name %></title>
 </head>
 <H2><%= r.name %></H2>
-<% if (r.photo != null) { %>
+<% if (r.photo != null  && (r.mimetype ==  "image/*"  ) ) { %>
 <p>
   <img src="data:<%= r.mimetype %>;base64,<%= r.photo %>">
 <br>
